@@ -19,11 +19,22 @@ function App() {
           <li><Link to="/users">Users</Link> </li>
         </nav> */}
         <Routes>
-          <Route exact path="/" element={<Main />}></Route>
-          <Route path="/about" element={<About/>}></Route>
-          <Route exact path="/users" element={<Users/>}></Route>
-          <Route path="/users/:userName" element={<UserId/>}></Route>
-          <Route element={< Error/>}></Route>
+          <Route
+            exact
+            path="https://vikmillion.github.io/test/"
+            element={<Main />}
+          ></Route>
+          <Route
+            path="https://vikmillion.github.io/about"
+            element={<About />}
+          ></Route>
+          <Route
+            exact
+            path="https://vikmillion.github.io/users"
+            element={<Users />}
+          ></Route>
+          <Route path="/users/:userName" element={<UserId />}></Route>
+          <Route element={<Error />}></Route>
         </Routes>
       </Router>
     </>
