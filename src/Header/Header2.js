@@ -9,7 +9,7 @@ function Header2(props) {
             <a href="/about">About</a>
           </li>
           <li>
-            <a href="/users">Users</a>
+            <a href="/users">USers</a>
           </li>
         </nav>
       </>
