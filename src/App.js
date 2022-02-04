@@ -3,6 +3,8 @@ import Header2 from "./Header/Header2";
 import About from "./About";
 import Users from "./Users";
 import Main from "./Main";
+import UserId from "./UserId";
+import Error from "./Error";
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
@@ -19,7 +21,9 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Main />}></Route>
           <Route path="/about" element={<About/>}></Route>
-          <Route path="/users" element={<Users/>}></Route>
+          <Route exact path="/users" element={<Users/>}></Route>
+          <Route path="/users/:userName" element={<UserId/>}></Route>
+          <Route element={< Error/>}></Route>
         </Routes>
       </Router>
     </>
