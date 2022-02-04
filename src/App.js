@@ -6,7 +6,7 @@ import Main from "./Main";
 import UserId from "./UserId";
 import Error from "./Error";
 
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
