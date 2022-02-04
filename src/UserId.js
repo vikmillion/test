@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 
 function UserId(params) {
-    let { userName } = useParams();
+    let {userName} = useParams();
     return (
         <div>
             <a href="/users">Назад</a>
