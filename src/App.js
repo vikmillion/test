@@ -19,10 +19,10 @@ function App() {
           <li><Link to="/users">Users</Link> </li>
         </nav> */}
         <Routes>
-          <Route exact path="/" element={<Main />}></Route>
-          <Route path="/about" element={<About/>}></Route>
-          <Route exact path="/users" element={<Users/>}></Route>
-          <Route path="/users/:userName" element={<UserId/>}></Route>
+          <Route exact path="test/" element={<Main />}></Route>
+          <Route path="test/about" element={<About/>}></Route>
+          <Route exact path="test/users" element={<Users/>}></Route>
+          <Route path="test/users/:userName" element={<UserId/>}></Route>
           <Route element={< Error/>}></Route>
         </Routes>
       </Router>
