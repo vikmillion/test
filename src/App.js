@@ -6,7 +6,7 @@ import Main from "./Main";
 import UserId from "./UserId";
 import Error from "./Error";
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 
@@ -23,6 +23,28 @@ function App() {
         <Routes>
           <Route
             exact
+            path="/"
+            element={<Main />}
+          ></Route>
+          <Route
+            path="/about"
+            element={<About />}
+          ></Route>
+          <Route
+            exact
+            path="/users"
+            element={<Users />}
+          ></Route>
+          <Route
+            path="/users/:userName"
+            element={<UserId />}
+          ></Route>
+          <Route element={<Error />}></Route>
+        </Routes>
+
+        {/* <Routes>
+          <Route
+            exact
             path={process.env.PUBLIC_URL + "/"}
             element={<Main />}
           ></Route>
@@ -35,9 +57,12 @@ function App() {
             path={process.env.PUBLIC_URL + "/users"}
             element={<Users />}
           ></Route>
-          <Route path= {process.env.PUBLIC_URL + '/users/:userName'} element={<UserId />}></Route>
+          <Route
+            path={process.env.PUBLIC_URL + "/users/:userName"}
+            element={<UserId />}
+          ></Route>
           <Route element={<Error />}></Route>
-        </Routes>
+        </Routes> */}
       </Router>
     </>
   );
