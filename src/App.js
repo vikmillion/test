@@ -6,7 +6,7 @@ import Main from "./Main";
 import UserId from "./UserId";
 import Error from "./Error";
 
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { Link, HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 
@@ -20,28 +20,24 @@ function App() {
           <li>  <Link to="/about">About</Link> </li>
           <li><Link to="/users">Users</Link> </li>
         </nav> */}
-        <Routes>
-          <Route
-            exact
-            path="/"
-            element={<Main />}
-          ></Route>
-          <Route
-            path="/about"
-            element={<About />}
-          ></Route>
-          <Route
-            exact
-            path="/users"
-            element={<Users />}
-          ></Route>
-          <Route
-            path="/users/:userName"
-            element={<UserId />}
-          ></Route>
+        <Router>
+          <Link to="/"></Link>
+          <Link to="/about"></Link>
+          <Link to="/users"></Link>
+          <Link to="users/:userName"></Link>
+          <Route exact path="/" component={<Main />}></Route>
+          <Route path="/about" component={<About />}></Route>
+          <Route exact path="/users" component={<Users />}></Route>
+          <Route path="/users/:userName" component={<UserId />}></Route>
           <Route element={<Error />}></Route>
-        </Routes>
-
+        </Router>
+        {/* <Routes>
+          <Route exact path="/" element={<Main />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route exact path="/users" element={<Users />}></Route>
+          <Route path="/users/:userName" element={<UserId />}></Route>
+          <Route element={<Error />}></Route>
+        </Routes> */}
         {/* <Routes>
           <Route
             exact
