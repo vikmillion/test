@@ -8,6 +8,8 @@ import Error from "./Error";
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+
+
 function App() {
   return (
     <>
@@ -21,19 +23,19 @@ function App() {
         <Routes>
           <Route
             exact
-            path="https://vikmillion.github.io/test/"
+            path={process.env.PUBLIC_URL + "/"}
             element={<Main />}
           ></Route>
           <Route
-            path="https://vikmillion.github.io/about"
+            path={process.env.PUBLIC_URL + "/about"}
             element={<About />}
           ></Route>
           <Route
             exact
-            path="https://vikmillion.github.io/users"
+            path={process.env.PUBLIC_URL + "/users"}
             element={<Users />}
           ></Route>
-          <Route path="/users/:userName" element={<UserId />}></Route>
+          <Route path= {process.env.PUBLIC_URL + '/users/:userName'} element={<UserId />}></Route>
           <Route element={<Error />}></Route>
         </Routes>
       </Router>
